@@ -35,7 +35,7 @@ to test simply run `rspec`
 
 ## Authors
 
-👤 **Brian Orora**
+👤 **Francis Ugorji**
 
 - GitHub: [@Gambit142](https://github.com/Gambit142)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/francis-ugorji/)
