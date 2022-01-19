@@ -1,15 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-user1 = User.create!(name: 'Francis Ugorji', photo: 'bio', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque enim, viverra nec quam sit amet, suscipit aliquam nulla. - Francis Ugorji', posts_counter: 0)
-user2 = User.create!(name: 'Brian Orora', photo: 'bio', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque enim, viverra nec quam sit amet, suscipit aliquam nulla. - Brian Orora', posts_counter: 0)
-user3 = User.create!(name: 'Toluwase Ajise', photo: 'bio', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque enim, viverra nec quam sit amet, suscipit aliquam nulla. - Toluwase Ajise', posts_counter: 0)
-user4 = User.create!(name: 'Chaw Nguni', photo: 'bio', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque enim, viverra nec quam sit amet, suscipit aliquam nulla. - Chaw Nguni', posts_counter: 0)
+photo1 = 'https://images.unsplash.com/photo-1624574337423-7ea725c5540c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80'
+photo2 = 'https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+photo3 = 'https://images.unsplash.com/photo-1524660988542-c440de9c0fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+photo4 = 'https://images.unsplash.com/photo-1487573884658-a5d3c667584e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=803&q=80'
+user1 = User.create!(name: 'Francis Ugorji', photo: photo1, bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque enim, viverra nec quam sit amet, suscipit aliquam nulla. - Francis Ugorji', posts_counter: 0)
+user2 = User.create!(name: 'Brian Orora', photo: photo2, bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque enim, viverra nec quam sit amet, suscipit aliquam nulla. - Brian Orora', posts_counter: 0)
+user3 = User.create!(name: 'Toluwase Ajise', photo: photo3, bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque enim, viverra nec quam sit amet, suscipit aliquam nulla. - Toluwase Ajise', posts_counter: 0)
+user4 = User.create!(name: 'Chaw Nguni', photo: photo4, bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque enim, viverra nec quam sit amet, suscipit aliquam nulla. - Chaw Nguni', posts_counter: 0)
 
 lorem_donec = 'Donec dapibus consequat tellus a pulvinar. Fusce auctor rhoncus orci a semper. Sed interdum accumsan ullamcorper.'
 lorem_mauris = 'Mauris hendrerit odio eu quam dapibus, sit amet malesuada quam pulvinar. Ut quis venenatis ex, eu tristique orci.'
