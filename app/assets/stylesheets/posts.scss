@@ -33,14 +33,14 @@
 }
 
 .comment-bio-div {
-  margin: 2rem 2rem 0 2rem
+  margin: 2rem 2rem 0 2rem;
 }
 
 .comments-section {
   margin: 0 2rem;
   padding: 0.5rem;
 
-  p {
+  .comments-section p {
     gap: 2rem;
   }
 }
@@ -65,7 +65,6 @@
         margin: 0 0.4rem;
       }
     }
-
   }
 
   .comments-section {
