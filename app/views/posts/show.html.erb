@@ -1,1 +1,19 @@
-<h1>Here is the view for a post of a single user</h1>
+<div class="post-details-div">
+  <div class="single-post-details border-style">
+    <div class="title-details d-flex">
+      <p><%= @post.title %> by <%= @post.user.name%></p>
+      <div>
+        <span>Comments: <%= @post.comments_counter%></span>
+        <span>Likes: <%= @post.likes_counter%></span>
+      </div>
+    </div>
+    <div>
+      <%= @post.text %>
+    </div>
+  </div>
+  <div class="comments-section border-style">
+    <% @post.five_recent_comments.each do |comment|%>
+      <p class="d-flex"><span><%= comment.user.name %>:</span><span><%= comment.text %></span></p>
+    <% end %>
+  </div>
+</div>

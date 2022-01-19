@@ -1,3 +1,73 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.border-style {
+  border: 2px solid #551a8b;
+  border-radius: 10px;
+}
+
+.comment-div {
+  margin-top: 2rem;
+  padding: 0.5rem;
+
+  .comment-text p {
+    margin-top: 0.5rem;
+  }
+
+  .counter-div {
+    margin-top: 0.5rem;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+}
+
+.comment-bio-div {
+  margin: 2rem 2rem 0 2rem;
+}
+
+.comments-section {
+  margin: 0 2rem;
+  padding: 0.5rem;
+
+  .comments-section p {
+    gap: 2rem;
+  }
+}
+
+.post-details-div {
+  margin: 2rem;
+
+  .single-post-details {
+    padding: 0.5rem;
+
+    .title-details {
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.6rem;
+
+      p {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+
+      span {
+        margin: 0 0.4rem;
+      }
+    }
+  }
+
+  .comments-section {
+    margin: 0;
+  }
+}
