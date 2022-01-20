@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'users/:user_id/posts/:id/create', to: 'comments#create', as: 'create_comment'
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create]
   end
