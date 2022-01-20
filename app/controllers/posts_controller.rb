@@ -13,24 +13,24 @@ class PostsController < ApplicationController
 
   def new
     find_user
-    post= find_user.posts.new
+    post = find_user.posts.new
     render :new, locals: { post: post }
   end
 
   def create
     find_user
-    new_post= find_user.posts.new(post_params)
+    new_post = find_user.posts.new(post_params)
     new_post.comments_counter = 0
     new_post.likes_counter = 0
     respond_to do |format|
       format.html do
-          if new_post.save
-            flash[:success] = "Post created successfully"
-            redirect_to user_posts_url
-          else
-            flash.now[:error] = "Error: Post could not be created"
-            render :new, locals: { post: new_post }
-          end
+        if new_post.save
+          flash[:success] = 'Post created successfully'
+          redirect_to user_posts_url
+        else
+          flash.now[:error] = 'Error: Post could not be created'
+          render :new, locals: { post: new_post }
+        end
       end
     end
   end
@@ -41,4 +41,3 @@ class PostsController < ApplicationController
     params.require(:add_post).permit(:title, :text)
   end
 end
-
