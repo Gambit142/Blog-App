@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  post 'users/:user_id/posts/:id/create', to: 'comments#create', as: 'create_comment'
+  post 'users/:user_id/posts/:id/create_comment', to: 'comments#create', as: 'create_comment'
+  post 'users/:user_id/posts/:id/create_like', to: 'likes#create', as: 'like_comment'
+
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create]
   end
