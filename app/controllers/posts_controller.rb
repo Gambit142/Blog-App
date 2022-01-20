@@ -22,7 +22,6 @@ class PostsController < ApplicationController
     new_post= find_user.posts.new(post_params)
     new_post.comments_counter = 0
     new_post.likes_counter = 0
-    new_post.save
     respond_to do |format|
       format.html do
           if new_post.save
