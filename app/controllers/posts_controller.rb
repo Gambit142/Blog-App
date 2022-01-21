@@ -12,14 +12,12 @@ class PostsController < ApplicationController
   end
 
   def new
-    find_user
-    post = find_user.posts.new
+    post = current_user.posts.new
     render :new, locals: { post: post }
   end
 
   def create
-    find_user
-    new_post = find_user.posts.new(post_params)
+    new_post = current_user.posts.new(post_params)
     new_post.comments_counter = 0
     new_post.likes_counter = 0
     respond_to do |format|
