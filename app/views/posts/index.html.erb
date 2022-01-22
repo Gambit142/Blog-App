@@ -3,7 +3,7 @@
 </div>
 <div>
   <div>List of All Posts</div>
-  <% @user.posts.each_with_index do |post, index|%>
+  <% @posts.each_with_index do |post, index| %>
     <div class="comment-bio-div">
       <%= render partial: "post", locals: { post_counter: index, post: post } %>
     </div>
