@@ -7,7 +7,7 @@ RSpec.describe 'Posts', type: :request do
 
       expect(response).to have_http_status(200)
       expect(response).to render_template(:index)
-      expect(response.body).to include('Here is a list of posts for a given user')
+      expect(response.body).to include('<div>List of All Posts</div>')
     end
 
     it 'tests the URL path for posts#show' do
@@ -15,7 +15,7 @@ RSpec.describe 'Posts', type: :request do
 
       expect(response).to have_http_status(200)
       expect(response).to render_template(:show)
-      expect(response.body).to include('<h1>Here is the view for a post of a single user</h1>')
+      expect(response.body).to include('<i class="fas fa-heart"></i>')
     end
   end
 end

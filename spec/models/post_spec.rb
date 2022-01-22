@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  subject { 
+  subject do
     user1 = User.new(name: 'Gambit', photo: 'string', bio: 'string', posts_counter: 0)
     Post.create!(title: 'Business', text: 'This is a business post', likes_counter: 0, comments_counter: 0, user: user1)
-  }
+  end
 
   describe 'validations of Post model' do
     it 'should be a valid post' do
@@ -40,8 +40,8 @@ RSpec.describe Post, type: :model do
   describe 'test post methods' do
     it 'should test the functionality of five_recent_posts' do
       user2 = User.create!(name: 'Thunder Cat', photo: 'photo4', bio: 'Lorem ipsum dolor', posts_counter: 0)
-      comment1 = user2.comments.create!(text: 'first_comment', post: subject)
-      comment2 = user2.comments.create!(text: 'second_comment', post: subject)
+      user2.comments.create!(text: 'first_comment', post: subject)
+      user2.comments.create!(text: 'second_comment', post: subject)
       comment3 = user2.comments.create!(text: 'third_comment', post: subject)
       comment4 = user2.comments.create!(text: 'fourth_comment', post: subject)
       comment5 = user2.comments.create!(text: 'fifth_comment', post: subject)
