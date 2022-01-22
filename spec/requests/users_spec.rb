@@ -7,7 +7,7 @@ RSpec.describe 'Users', type: :request do
 
       expect(response).to have_http_status(200)
       expect(response).to render_template(:index)
-      expect(response.body).to include('<h1>Here is a list of users in the database</h1>')
+      expect(response.body).to include('Number of Posts:')
     end
 
     it 'tests the URL path for users#show' do
@@ -15,7 +15,7 @@ RSpec.describe 'Users', type: :request do
 
       expect(response).to have_http_status(200)
       expect(response).to render_template(:show)
-      expect(response.body).to include('<h1>Here is the view for only one user</h1>')
+      expect(response.body).to include('<h3>Bio</h3>')
     end
   end
 end

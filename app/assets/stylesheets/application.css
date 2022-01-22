@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.success {
+  text-align: center;
+  color: #551a8b;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.error {
+  text-align: center;
+  color: #df0f0f;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
