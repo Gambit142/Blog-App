@@ -12,6 +12,16 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <% if user_signed_in? %>
+          <li><%= link_to 'Sign Out', destroy_user_session_url, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Sign In', new_user_session_url %></li>
+        <% end %>
+      </ul>
+    </nav>
+
     <% flash.each do |name, msg| -%>
       <%= content_tag :p, msg, class: name %>
     <% end -%>
