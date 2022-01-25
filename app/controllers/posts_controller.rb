@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def find_user
     @user = User.find(params[:user_id])
   end
@@ -19,7 +20,7 @@ class PostsController < ApplicationController
   def create
     new_post = current_user.posts.new(post_params)
     new_post.comments_counter = 0
-    new_post.likes_counter = 0
+    new_post.likes_counters = 0
     respond_to do |format|
       format.html do
         if new_post.save
@@ -31,6 +32,13 @@ class PostsController < ApplicationController
         end
       end
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:success] = 'You deleted this post'
+    redirect_to user_posts_url
   end
 
   private

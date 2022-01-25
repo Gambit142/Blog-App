@@ -10,17 +10,17 @@
 # lorem_donec = 'Donec dapibus consequat tellus a pulvinar. Fusce auctor rhoncus orci a semper. Sed interdum accumsan ullamcorper.'
 # lorem_mauris = 'Mauris hendrerit odio eu quam dapibus, sit amet malesuada quam pulvinar. Ut quis venenatis ex, eu tristique orci.'
 
-# post1 = user1.posts.create!(title: 'Technology', text: lorem_donec, likes_counter: 0, comments_counter: 0)
-# post2 = user1.posts.create!(title: 'Science', text: lorem_mauris, likes_counter: 0, comments_counter: 0)
+# post1 = user1.posts.create!(title: 'Technology', text: lorem_donec, likes_counters: 0, comments_counter: 0)
+# post2 = user1.posts.create!(title: 'Science', text: lorem_mauris, likes_counters: 0, comments_counter: 0)
 
-# post3 = user2.posts.create!(title: 'Business', text: lorem_donec, likes_counter: 0, comments_counter: 0)
-# post4 = user2.posts.create!(title: 'Education', text: lorem_mauris, likes_counter: 0, comments_counter: 0)
+# post3 = user2.posts.create!(title: 'Business', text: lorem_donec, likes_counters: 0, comments_counter: 0)
+# post4 = user2.posts.create!(title: 'Education', text: lorem_mauris, likes_counters: 0, comments_counter: 0)
 
-# post5 = user3.posts.create!(title: 'Sports', text: lorem_donec, likes_counter: 0, comments_counter: 0)
-# post6 = user3.posts.create!(title: 'Agriculture', text: lorem_mauris, likes_counter: 0, comments_counter: 0)
+# post5 = user3.posts.create!(title: 'Sports', text: lorem_donec, likes_counters: 0, comments_counter: 0)
+# post6 = user3.posts.create!(title: 'Agriculture', text: lorem_mauris, likes_counters: 0, comments_counter: 0)
 
-# post7 = user4.posts.create!(title: 'Arts', text: lorem_donec, likes_counter: 0, comments_counter: 0)
-# post8 = user4.posts.create!(title: 'Infrastructure', text: lorem_mauris, likes_counter: 0, comments_counter: 0)
+# post7 = user4.posts.create!(title: 'Arts', text: lorem_donec, likes_counters: 0, comments_counter: 0)
+# post8 = user4.posts.create!(title: 'Infrastructure', text: lorem_mauris, likes_counters: 0, comments_counter: 0)
 
 # good_placeholder = 'Lorem Ipsum is a good placeholder'
 # best_placeholder = 'Lorem Ipsum is the best placeholder'
