@@ -35,8 +35,7 @@
   margin-top: 1rem;
 }
 
-
-.flex  {
+.flex {
   display: flex;
 }
 
@@ -61,7 +60,7 @@
 }
 
 .mx-30 {
-  margin: 10 30px;
+  margin: 10px 30px;
 }
 
 .mr-10 {
@@ -69,7 +68,7 @@
 }
 
 .border-black {
-  border: 2px solid black;;
+  border: 2px solid black;
 }
 
 .text-center {
