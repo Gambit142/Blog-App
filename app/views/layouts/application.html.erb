@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/29d7bf5b00.js" crossorigin="anonymous"></script>
   </head>
 
@@ -15,7 +15,7 @@
     <nav>
       <ul>
         <% if user_signed_in? %>
-          <li><%= link_to 'Sign Out', destroy_user_session_url, method: :delete %></li>
+          <li><%= link_to 'Sign Out', destroy_user_session_url, method: :delete  %></li>
         <% else %>
           <li><%= link_to 'Sign In', new_user_session_url %></li>
           <li><%= link_to 'Sign Up',  new_user_registration_url %></li>
