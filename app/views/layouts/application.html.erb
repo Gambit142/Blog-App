@@ -12,13 +12,19 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
+    <nav class="nav-bar flex justify-center items-center">
+      <ul class="flex mx-30 no-list">
         <% if user_signed_in? %>
-          <li><%= link_to 'Sign Out', destroy_user_session_url, method: :delete  %></li>
+          <li class="mr-10">
+            <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: 'font-xl' %>
+          </li>
         <% else %>
-          <li><%= link_to 'Sign In', new_user_session_url %></li>
-          <li><%= link_to 'Sign Up',  new_user_registration_url %></li>
+          <li class="mr-10">
+            <%= link_to 'Sign In', new_user_session_url, class: 'font-xl' %>
+          </li>
+          <li class="mr-10">
+            <%= link_to 'Sign Up',  new_user_registration_url, class: 'font-xl' %>
+          </li>
         <% end %>
       </ul>
     </nav>
