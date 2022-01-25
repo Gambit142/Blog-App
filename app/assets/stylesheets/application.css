@@ -34,3 +34,68 @@
   font-size: 1.2rem;
   margin-top: 1rem;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.no-list {
+  list-style: none;
+}
+
+.nav-bar {
+  margin: 30px 0;
+}
+
+.mx-30 {
+  margin: 10px 30px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.border-black {
+  border: 2px solid black;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-lg {
+  font-size: 20px;
+}
+
+.font-xl {
+  font-size: 30px;
+}
+
+.form-container {
+  margin: 0 40%;
+  padding: 10px;
+}
+
+.form-inputs {
+  width: 95%;
+  height: 40px;
+  margin: 10px;
+}
+
+.buttons {
+  width: 60%;
+  height: 40px;
+  margin: 10px 0;
+}
