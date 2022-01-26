@@ -15,10 +15,12 @@ class CommentsController < ApplicationController
   end
 
   def delete
+    post = Post.find(params[:post_id])
     comment = Comment.find(params[:id])
     comment.destroy
     flash[:success] = 'You deleted this comment'
-    redirect_to user_post_url(params[:user_id], params[:post_id])
+
+    redirect_to user_post_path(post.user_id, post.id)
   end
 
   private
