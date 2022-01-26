@@ -15,6 +15,9 @@
     <nav class="nav-bar flex justify-center items-center">
       <ul class="flex mx-30 no-list">
         <li class="mr-10"><%= link_to 'Home', root_url, class: 'font-xl' %></li>
+        <li class="mr-10">
+            <%= link_to 'Post Feeds',  users_url, class: 'font-xl' %>
+          </li>
         <% if user_signed_in? %>
           <li class="mr-10">
             <%= link_to 'Sign Out', destroy_user_session_url, method: :delete, class: 'font-xl' %>

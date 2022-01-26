@@ -18,6 +18,7 @@
     <div>
       <%= @post.text %>
     </div>
+    <small>Created <%= time_ago_in_words(@post.created_at)%> ago</small>
   </div>
   <div class="comments-section border-style">
     <% @post.five_recent_comments.each do |comment|%>
@@ -26,6 +27,7 @@
           <span><%= comment.user.name %>:</span>
           <span><%= comment.text %></span>
         </p>
+        <small>Created <%= time_ago_in_words(comment.created_at)%> ago</small>
 
         <button>
           <% if can? :destroy, comment %>

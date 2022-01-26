@@ -5,8 +5,11 @@
       <p><%= post.text %></p>
     </div>
     <div class="counter-div d-flex">
-      <span>Comments: <%= post.comments_counter%></span>
-      <span>Likes: <%= post.likes_counters%></span>
+      <div class="time-info">Created <%= time_ago_in_words(post.created_at)%> ago</div>
+      <div>
+        <span>Comments: <%= post.comments_counter%></span>
+        <span>Likes: <%= post.likes_counters%></span>
+      </div>
     </div>
   </div>
 <% end %>
