@@ -22,14 +22,14 @@ RSpec.describe User, type: :model do
 
   describe 'test user methods' do
     it 'should test the functionality of three_recent_posts' do
-      subject.posts.create!(title: 'Technology', text: 'This is a technology post', likes_counter: 0,
+      subject.posts.create!(title: 'Technology', text: 'This is a technology post', likes_counters: 0,
                             comments_counter: 0)
-      subject.posts.create!(title: 'Business', text: 'This is a business post', likes_counter: 0,
+      subject.posts.create!(title: 'Business', text: 'This is a business post', likes_counters: 0,
                             comments_counter: 0)
-      post3 = subject.posts.create!(title: 'Arts', text: 'This is a arts post', likes_counter: 0, comments_counter: 0)
-      post4 = subject.posts.create!(title: 'Science', text: 'This is a science post', likes_counter: 0,
+      post3 = subject.posts.create!(title: 'Arts', text: 'This is a arts post', likes_counters: 0, comments_counter: 0)
+      post4 = subject.posts.create!(title: 'Science', text: 'This is a science post', likes_counters: 0,
                                     comments_counter: 0)
-      post5 = subject.posts.create!(title: 'Sports', text: 'This is a sports post', likes_counter: 0,
+      post5 = subject.posts.create!(title: 'Sports', text: 'This is a sports post', likes_counters: 0,
                                     comments_counter: 0)
 
       posts = subject.three_recent_posts

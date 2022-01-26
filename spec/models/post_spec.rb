@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   subject do
     user1 = User.new(name: 'Gambit', photo: 'string', bio: 'string', posts_counter: 0)
-    Post.create!(title: 'Business', text: 'This is a business post', likes_counter: 0, comments_counter: 0, user: user1)
+    Post.create!(title: 'Business', text: 'This is a business post', likes_counters: 0, comments_counter: 0,
+                 user: user1)
   end
 
   describe 'validations of Post model' do
@@ -26,8 +27,8 @@ RSpec.describe Post, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should be invalid if likes_counter is blank' do
-      subject.likes_counter = nil
+    it 'should be invalid if likes_counters is blank' do
+      subject.likes_counters = nil
       expect(subject).to_not be_valid
     end
 

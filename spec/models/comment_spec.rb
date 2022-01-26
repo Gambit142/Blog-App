@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
   subject do
     user1 = User.new(name: 'Gambit', photo: 'string', bio: 'string', posts_counter: 0)
-    Post.create!(title: 'Business', text: 'This is a business post', likes_counter: 0, comments_counter: 0, user: user1)
+    Post.create!(title: 'Business', text: 'This is a business post', likes_counters: 0, comments_counter: 0,
+                 user: user1)
   end
 
   describe 'test comments methods' do
