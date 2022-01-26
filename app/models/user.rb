@@ -15,6 +15,6 @@ class User < ApplicationRecord
   end
 
   def admin?
-    :role == 'admin' ? true : false
+    :role == 'admin'
   end
 end
