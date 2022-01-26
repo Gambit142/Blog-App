@@ -1,7 +1,8 @@
 <div class="post-details-div">
   <div class="single-post-details border-style">
     <div class="title-details d-flex">
-      <button><% if can? :destroy, @post %>
+      <button>
+      <% if can? :destroy, @post %>
       <%= link_to 'Delete Post', 
         user_post_path(current_user.id), 
         method: :delete, 
@@ -20,7 +21,21 @@
   </div>
   <div class="comments-section border-style">
     <% @post.five_recent_comments.each do |comment|%>
-      <p class="d-flex"><span><%= comment.user.name %>:</span><span><%= comment.text %></span></p>
+      <div class="flex">
+        <p class="d-flex mr-10">
+          <span><%= comment.user.name %>:</span>
+          <span><%= comment.text %></span>
+        </p>
+
+        <button>
+          <% if can? :destroy, comment %>
+            <%= link_to 'Delete Comment', 
+              delete_comment_path(current_user.id, @post.id, comment.id),
+              method: :delete, 
+              data: {confirm: 'Are You Sure You Want to Delete This comment'} %>
+          <% end %>
+        </button>
+      </div>
     <% end %>
   </div>
 
