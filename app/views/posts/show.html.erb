@@ -41,18 +41,21 @@
     <% end %>
   </div>
 
-  <%= link_to like_comment_url, method: :post do %>
-    <i class="fas fa-heart"></i>
-  <% end %>
+  <% if current_user %>
 
-  <%= form_with url: :create_comment, method: :post, scope: :add_comment do |form| %>
+    <%= link_to like_comment_url, method: :post do %>
+      <i class="fas fa-heart"></i>
+    <% end %>
 
-    <div>
-      <%= form.label :text %><br>
-      <%= form.text_area :text, size: "100x6" %>
-    </div>
+    <%= form_with url: :create_comment, method: :post, scope: :add_comment do |form| %>
 
-    <%= form.submit %>
+      <div>
+        <%= form.label :text %><br>
+        <%= form.text_area :text, size: "100x6" %>
+      </div>
 
+      <%= form.submit %>
+
+    <% end %>
   <% end %>
 </div>
