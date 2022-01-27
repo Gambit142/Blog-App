@@ -264,7 +264,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   cancancan
-  capybara (>= 3.26)
+  capybara
   devise
   figaro
   jbuilder (~> 2.7)
