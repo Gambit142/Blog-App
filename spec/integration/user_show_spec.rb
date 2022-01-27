@@ -27,7 +27,7 @@ RSpec.describe 'User Show Page Features', type: :feature, js: true do
   end
 
   it 'can see the username' do
-    visit user_path(1)
+    visit user_path(@user1.id)
     expect(page).to have_text('Al')
   end
 
