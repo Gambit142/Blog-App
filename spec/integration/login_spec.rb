@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Login Features', type: :system do
-
   it 'login page contains email, password and button elements' do
     visit new_user_session_path
     expect(page).to have_css '.test-email'
