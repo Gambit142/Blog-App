@@ -1,11 +1,11 @@
 <%= link_to(user) do %>
 <article class="container d-flex">
   <div class="img-container border-style">
-    <img src="<%= user.photo %>" alt="User's Photo">
+    <img src="<%= user.photo %>" alt="User's Photo" class="profile-pic">
   </div>
   <div class="user-details d-flex border-style">
-    <h1><%= user.name %></h1>
-    <p>Number of Posts: <%= user.posts_counter %></p>
+    <h1 class="username"><%= user.name %></h1>
+    <p class="number-of-posts">Number of Posts: <%= user.posts_counter %></p>
   </div>
 </article>
 <% end %>

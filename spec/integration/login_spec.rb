@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Login Features', type: :system do
-  # before :each do
-  #   User.make(email: 'user@example.com', password: 'password')
-  # end
 
   it 'login page contains email, password and button elements' do
     visit new_user_session_path
