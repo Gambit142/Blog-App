@@ -12,8 +12,8 @@ RSpec.describe 'User Show Page Features', type: :feature, js: true do
   end
 
   before :each do
-    @user1= User.create(name: 'Al', email: 'al@example.com', password: 'password', confirmed_at: Time.now,
-                bio: 'Test bio')
+    @user1 = User.create(name: 'Al', email: 'al@example.com', password: 'password', confirmed_at: Time.now,
+                         bio: 'Test bio')
 
     visit new_user_session_path
     within('.form-container') do

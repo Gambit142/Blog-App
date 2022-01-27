@@ -13,7 +13,7 @@ RSpec.describe 'Post Show Page Features', type: :feature, js: true do
 
   before :each do
     @user1 = User.create(name: 'Al', email: 'al@example.com', password: 'password', confirmed_at: Time.now,
-                bio: 'Test bio')
+                         bio: 'Test bio')
 
     visit new_user_session_path
     within('.form-container') do
@@ -34,42 +34,42 @@ RSpec.describe 'Post Show Page Features', type: :feature, js: true do
   end
 
   it 'can see the post\'s title' do
-    visit  user_post_path(@user1.id, @post1.id)
+    visit user_post_path(@user1.id, @post1.id)
     expect(page).to have_content('post 1')
   end
 
   it 'can see the who wrote the post' do
-    visit  user_post_path(@user1.id, @post1.id)
+    visit user_post_path(@user1.id, @post1.id)
     expect(page).to have_content('Al')
   end
 
   it 'can see how many comments a post has' do
-    visit  user_post_path(@user1.id, @post1.id)
+    visit user_post_path(@user1.id, @post1.id)
     expect(page).to have_content('Comments: 2')
-    visit  user_post_path(@user1.id, @post2.id)
+    visit user_post_path(@user1.id, @post2.id)
     expect(page).to have_content('Comments: 1')
   end
 
   it 'can see how many likes a post has' do
-    visit  user_post_path(@user1.id, @post1.id)
+    visit user_post_path(@user1.id, @post1.id)
     expect(page).to have_content('Likes: 1')
   end
 
   it 'can see the post\'s body' do
-    visit  user_post_path(@user1.id, @post1.id)
+    visit user_post_path(@user1.id, @post1.id)
     expect(page).to have_content('text 1')
   end
 
   it 'can see the user name of the commentor' do
-    visit  user_post_path(@user1.id, @post1.id)
+    visit user_post_path(@user1.id, @post1.id)
     expect(page).to have_content('Al')
   end
 
   it 'can see comment made by the commmentor' do
-    visit  user_post_path(@user1.id, @post1.id)
+    visit user_post_path(@user1.id, @post1.id)
     expect(page).to have_content('This is comment 1')
     expect(page).to have_content('This is comment 2')
-    visit  user_post_path(@user1.id, @post2.id)
+    visit user_post_path(@user1.id, @post2.id)
     expect(page).to have_content('This is comment 3')
   end
 end
