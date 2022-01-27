@@ -1,6 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe 'Login Features', type: :system do
+RSpec.describe 'Login Features', type: :feature, js: true do
+  before(:all) do
+    # Selenium::WebDriver.logger.level = :debug
+    Capybara.current_driver = :headless_chrome
+    Capybara.javascript_driver = :headless_chrome
+  end
+
+  after(:all) do
+    Capybara.use_default_driver
+  end
+
   it 'login page contains email, password and button elements' do
     visit new_user_session_path
     expect(page).to have_css '.test-email'
@@ -29,6 +39,8 @@ RSpec.describe 'Login Features', type: :system do
   end
 
   it 'redirect to the homepage after login' do
+    User.create(id: 1, name: 'Tom', email: 'tom@test.com', password: '123456', confirmed_at: Time.now,
+      bio: 'Test bio')
     visit new_user_session_path
     within('.form-container') do
       fill_in 'Email', with: 'tom@test.com'

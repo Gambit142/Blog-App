@@ -7,9 +7,14 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'rspec/rails'
 load "#{Rails.root}/db/seeds.rb"
 
-Capybara.register_driver :selenium_chrome do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome)
+Capybara.register_driver :headless_chrome do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+      'goog:chromeOptions': { args: %w(no-sandbox headless disable-gpu window-size=1280,1024 disable-features=VizDisplayCompositor) } )
+
+  Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
 end
+
+Capybara.default_driver = :selenium_chrome
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -67,6 +72,4 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-
-  Capybara.default_driver = :selenium_chrome
 end

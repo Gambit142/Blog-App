@@ -1,6 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe 'User Show Page Features', type: :system do
+RSpec.describe 'User Show Page Features', type: :feature, js: true do
+  before(:all) do
+    # Selenium::WebDriver.logger.level = :debug
+    Capybara.current_driver = :headless_chrome
+    Capybara.javascript_driver = :headless_chrome
+  end
+
+  after(:all) do
+    Capybara.use_default_driver
+  end
+
   before :each do
     User.create(id: 1, name: 'Al', email: 'al@example.com', password: 'password', confirmed_at: Time.now,
                 bio: 'Test bio')
