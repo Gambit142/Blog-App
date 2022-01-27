@@ -12,7 +12,7 @@ RSpec.describe 'User Index Page Features', type: :feature, js: true do
   end
 
   before :each do
-    User.create(id: 1, name: 'Al', email: 'al@example.com', password: 'password', confirmed_at: Time.now)
+    @user1 = User.create(name: 'Al', email: 'al@example.com', password: 'password', confirmed_at: Time.now)
   end
 
   it 'can see the username of all other users' do
@@ -32,7 +32,7 @@ RSpec.describe 'User Index Page Features', type: :feature, js: true do
 
   it 'redirect to the user\'s show page' do
     visit users_path
-    click_link(href: user_path(1))
-    expect(page).to have_current_path(user_path(1))
+    click_link(href: user_path(@user1.id))
+    expect(page).to have_current_path(user_path(@user1.id))
   end
 end

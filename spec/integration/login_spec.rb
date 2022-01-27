@@ -39,7 +39,7 @@ RSpec.describe 'Login Features', type: :feature, js: true do
   end
 
   it 'redirect to the homepage after login' do
-    User.create(id: 1, name: 'Tom', email: 'tom@test.com', password: '123456', confirmed_at: Time.now,
+    User.create(name: 'Tom', email: 'tom@test.com', password: '123456', confirmed_at: Time.now,
       bio: 'Test bio')
     visit new_user_session_path
     within('.form-container') do
