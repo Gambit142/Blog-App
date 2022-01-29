@@ -16,6 +16,20 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'df07af4d0cec4fc8f4c8395153288b20b397c547ffaf683e71c0e724948a8ade6655c12d36b5a2acf7057e4ff1fd8c9b4e5d703a66ceee779665ab27e79cb6ca'
 
+  config.jwt do |jwt|
+    jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+  end
+  # config.jwt do |jwt|
+  #   # jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+  #   #     jwt.dispatch_requests = [
+  #   #     ['POST', %r{^/api/login$}]
+  #   #   ]
+  #   #   jwt.revocation_requests = [
+  #   #     ['DELETE', %r{^/api/logout$}]
+  #   #   ]
+  #   #   jwt.expiration_time = 1.day.to_i
+  # end
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -308,15 +322,4 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
-
-  config.jwt do |jwt|
-    jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
-        jwt.dispatch_requests = [
-        ['POST', %r{^/api/login$}]
-      ]
-      jwt.revocation_requests = [
-        ['DELETE', %r{^/api/logout$}]
-      ]
-      jwt.expiration_time = 1.day.to_i
-  end
 end
