@@ -16,6 +16,28 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'df07af4d0cec4fc8f4c8395153288b20b397c547ffaf683e71c0e724948a8ade6655c12d36b5a2acf7057e4ff1fd8c9b4e5d703a66ceee779665ab27e79cb6ca'
 
+  config.jwt do |jwt|
+    # jwt.secret = 
+    jwt.secret = "ffb01f1ce047dbcc0b1574874d803a7a2ef7581cac985f7bbae1fc60ff7b0b6d278450b8506af0eda276f7fa2d3d2cf24270abd2205f56d9f2fcfd3270e113fe"
+    # jwt.dispatch_requests = [
+    #   ['POST', %r{^/users/sign_up$}]
+    # ]
+    # jwt.revocation_requests = [
+    #   ['DELETE', %r{^/users/sign_out$}]
+    # ]
+    # jwt.expiration_time = 1.day.to_i
+  end
+  # config.jwt do |jwt|
+    # jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+    #     jwt.dispatch_requests = [
+    #     ['POST', %r{^/api/login$}]
+    #   ]
+    #   jwt.revocation_requests = [
+    #     ['DELETE', %r{^/api/logout$}]
+    #   ]
+    #   jwt.expiration_time = 1.day.to_i
+  # end
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -264,6 +286,7 @@ Devise.setup do |config|
   #
   # The "*/*" below is required to match Internet Explorer requests.
   # config.navigational_formats = ['*/*', :html]
+  # config.navigational_formats = [:html, :json]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
