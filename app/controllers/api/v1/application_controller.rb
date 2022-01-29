@@ -14,7 +14,6 @@ module Api
           render jsonapi_errors: resource.errors, status: 400
         end
       end
-    
     end
   end
 end

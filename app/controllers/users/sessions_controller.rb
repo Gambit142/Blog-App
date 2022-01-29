@@ -5,7 +5,7 @@ class Users::SessionsController < Devise::SessionsController
 
   private
 
-  def respond_with(resource, _opts = {})
+  def respond_with(_resource, _opts = {})
     if current_user
       login_success
     else
