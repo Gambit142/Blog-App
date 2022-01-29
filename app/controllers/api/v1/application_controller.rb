@@ -3,10 +3,6 @@ module Api
     class ApplicationController < ActionController::API
       include ExceptionHandler
 
-      # def json_payload
-      #   HashWithIndifferentAccess.new(JSON.parse(request.raw_post))
-      # end
-
       def render_jsonapi_response(resource)
         if resource.errors.empty?
           render jsonapi: resource
