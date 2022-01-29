@@ -1,26 +1,13 @@
 Rails.application.routes.draw do
-  # devise_for :users,
-  #   defaults: { format: :json },
-  #   path: '',
-  #   path_names: {
-  #     sign_in: 'api/login',
-  #     sign_out: 'api/logout',
-  #     registration: 'api/signup'
-  #   },
-  #   controllers: {
-  #     sessions: 'sessions',
-  #     registrations: 'registrations'
-  #   }
-
   Rails.application.routes.draw do
     devise_for :users,
-              controllers: {
-                sessions: 'users/sessions',
-                registrations: 'users/registrations'
-              }
+               controllers: {
+                   sessions: 'users/sessions',
+                   registrations: 'users/registrations'
+               }
     get '/member-data', to: 'members#show'
   end
-
+  
   post 'users/:user_id/posts/:id/create_comment', to: 'comments#create', as: 'create_comment'
   post 'users/:user_id/posts/:id/create_like', to: 'likes#create', as: 'like_comment'
   delete 'users/:user_id/posts/:post_id/delete_comment/:id', to: 'comments#delete', as: 'delete_comment' 

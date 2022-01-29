@@ -1,4 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  skip_before_action :verify_authenticity_token
+  prepend_before_action :require_no_authentication, only: [:cancel]
   respond_to :json
 
   private
